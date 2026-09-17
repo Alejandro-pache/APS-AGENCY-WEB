@@ -55,10 +55,10 @@ El formulario está preparado para envío directo por AJAX a Formspree: no abre 
 
 El formulario solo exige nombre, correo y aceptación de la privacidad. Empresa, teléfono, sector, localidad, redes, plan y objetivo quedan opcionales para reducir fricción en móvil sin perder información útil para cualificar el contacto. También incluye un honeypot `_gotcha` para filtrar bots. Las métricas de audiencia siguen identificadas como experiencia propia, y los proyectos futuros conservan su estado «Próximamente».
 
-La animación de recarga, su imagen y su duración originales se conservan. La web no incorpora analítica, rastreadores ni nuevas dependencias externas; el envío utiliza la API HTTPS de Formspree mediante `fetch` nativo.
+La animación de recarga conserva su imagen y desaparece en un máximo de 3 segundos. La web no incorpora analítica, rastreadores ni nuevas dependencias externas; el envío utiliza la API HTTPS de Formspree mediante `fetch` nativo.
 
 ## Activar la recepción de propuestas
 
-Sigue los pasos de `docs/ACTIVAR-FORMULARIO.md`. Necesitarás crear una cuenta de Formspree con `infopumpalex201@gmail.com`, verificarla, crear un formulario y copiar su endpoint público (por ejemplo, `https://formspree.io/f/xxxxxxxx`). Ese endpoint se pega únicamente en `contact-config.js`; nunca pongas una contraseña ni una clave privada en la web.
+El formulario usa el endpoint público definitivo de Formspree configurado en `contact-config.js`: `https://formspree.io/f/mvkgonrz`. Nunca pongas una contraseña ni una clave privada en la web.
 
 Consulta `docs/REVISION-SEO.md` para ver las comprobaciones realizadas y los pasos que requieren una web publicada.

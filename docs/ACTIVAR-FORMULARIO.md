@@ -1,25 +1,24 @@
 # Activar el formulario de propuestas
 
-La web ya no depende de `mailto:` para enviar una propuesta. El navegador hace un `POST` AJAX y muestra una confirmación solo cuando el proveedor responde correctamente. Para recibir las solicitudes, hay que conectar el endpoint de una cuenta propia.
+La web ya no depende de `mailto:` para enviar una propuesta. El navegador hace un `POST` AJAX y muestra una confirmación solo cuando Formspree responde correctamente. El endpoint definitivo ya está configurado.
 
 ## 1. Crear el destino
 
-1. Entra en [Formspree](https://formspree.io/) y crea una cuenta con `infopumpalex201@gmail.com`.
-2. Verifica el correo y pulsa **New Form** en el panel.
-3. Ponle un nombre reconocible, por ejemplo `Propuestas AP’s Agency`.
+1. Entra en [Formspree](https://formspree.io/) con la cuenta vinculada a `contacto@apsagency.es`.
+2. Abre el formulario definitivo de AP's Agency.
+3. Confirma que el endpoint público es `https://formspree.io/f/mvkgonrz`.
 4. En **Workflow/Email**, comprueba que la dirección de destino es la tuya y que está verificada.
-5. En **Integration**, copia el endpoint con este formato: `https://formspree.io/f/ID_DEL_FORMULARIO`.
 
 Formspree guarda las solicitudes en su panel y puede enviar notificaciones al correo configurado. También admite integraciones adicionales, como una hoja de cálculo, desde su panel; comprueba qué opciones y límites tiene el plan que elijas.
 
 ## 2. Pegar el endpoint
 
-Abre `contact-config.js` y sustituye únicamente la cadena vacía:
+`contact-config.js` debe quedar así:
 
 ```js
 window.AP_CONTACT_CONFIG = Object.freeze({
-  endpoint: 'https://formspree.io/f/ID_DEL_FORMULARIO',
-  timeoutMs: 15000
+  endpoint: 'https://formspree.io/f/mvkgonrz',
+  timeoutMs: 10000
 });
 ```
 
@@ -29,7 +28,7 @@ No pegues contraseñas, tokens privados ni claves de API. El endpoint de un form
 
 1. Sube de nuevo la carpeta `aps-agency` a Vercel.
 2. Prueba desde móvil y ordenador con un lead de prueba real, usando un correo que controles.
-3. Confirma que aparece en el panel y que llega la notificación a `infopumpalex201@gmail.com` (revisa también spam).
+3. Confirma que aparece en el panel y que llega la notificación a `contacto@apsagency.es` (revisa también spam).
 4. Comprueba un envío correcto, un intento con datos incompletos, un doble clic en el botón y un fallo de red. El código desactiva el botón mientras espera y no muestra “recibido” sin una respuesta válida.
 
 Si activas un reto reCAPTCHA visible en Formspree, informa de ello en la política de cookies y prueba su flujo móvil. El honeypot `_gotcha` ya se incluye en la web como filtro silencioso.
