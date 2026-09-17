@@ -49,9 +49,9 @@ Si cambias precios o lo que incluye un plan, revisa la portada, su página de se
 
 Actualiza `lastmod` en `sitemap.xml` cuando hagas cambios relevantes en la página correspondiente. No es necesario cambiarlo cada día. Añade al sitemap únicamente páginas que quieras indexar.
 
-Los documentos legales se conservan y utilizan `noindex, follow` para excluir estas plantillas de los resultados de búsqueda; siguen accesibles para cualquier visitante. Revisa sus campos pendientes antes de publicarlos. La política de privacidad mantiene a Alejandro Pache Porras como responsable, sin campo de NIF/DNI.
+Los documentos legales se conservan y utilizan `noindex, follow` para excluirlos de los resultados de búsqueda; siguen accesibles para cualquier visitante. El aviso legal y la política de privacidad mantienen a Alejandro Pache Porras como titular/responsable.
 
-El formulario está preparado para envío directo por AJAX a Formspree: no abre la aplicación de correo del visitante, evita envíos duplicados, conserva los datos si hay un error y muestra un estado de éxito solo después de recibir confirmación del proveedor. Falta pegar el endpoint público de tu propio formulario en `contact-config.js`; hasta entonces no se envían datos a ningún destino.
+El formulario está preparado para envío directo por AJAX a Formspree: no abre la aplicación de correo del visitante, evita envíos duplicados, conserva los datos si hay un error y muestra un estado de éxito solo después de recibir confirmación del proveedor. El endpoint público del formulario se configura en `contact-config.js`.
 
 El formulario solo exige nombre, correo y aceptación de la privacidad. Empresa, teléfono, sector, localidad, redes, plan y objetivo quedan opcionales para reducir fricción en móvil sin perder información útil para cualificar el contacto. También incluye un honeypot `_gotcha` para filtrar bots. Las métricas de audiencia siguen identificadas como experiencia propia, y los proyectos futuros conservan su estado «Próximamente».
 

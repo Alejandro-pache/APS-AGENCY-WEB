@@ -97,7 +97,7 @@
       if (event.target === splash && event.propertyName === 'opacity') begin();
     };
     splash.addEventListener('transitionend', onEnd);
-    entranceTimer = setTimeout(begin, 900);
+    entranceTimer = setTimeout(begin, 120);
   };
   if (!motion.matches && 'IntersectionObserver' in window) {
     try {

@@ -15,8 +15,8 @@ addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame
 addEventListener('resize',syncProgress,{passive:true});
 syncProgress();
 const finishLoader=()=>{document.body.classList.remove('is-loading');document.body.classList.add('loaded')};
-addEventListener('load',()=>setTimeout(finishLoader,reduced?0:1850));
-setTimeout(finishLoader,3200);
+addEventListener('load',()=>setTimeout(finishLoader,reduced?0:650));
+setTimeout(finishLoader,3000);
 
 // Animated loading progress for the F5 splash screen.
 (() => {
@@ -47,7 +47,7 @@ setTimeout(finishLoader,3200);
     clearInterval(timer);
     const start = progress;
     const startedAt = performance.now();
-    const duration = 520;
+    const duration = 320;
     const complete = now => {
       const t = Math.min(1, (now - startedAt) / duration);
       const eased = 1 - Math.pow(1 - t, 3);

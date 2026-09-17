@@ -43,7 +43,7 @@ Las páginas de servicio amplían la presentación de la información existente.
 
 ## Comprobaciones tras publicar
 
-El dominio `apsagency.es` es una preconfiguración, no una comprobación de propiedad o disponibilidad. Antes de publicar, confirma el dominio definitivo y, si cambia, ejecuta la utilidad indicada en el README.
+El dominio `apsagency.es` es una preconfiguración, no una comprobación de propiedad o disponibilidad. Confirma el dominio definitivo y, si cambia, ejecuta la utilidad indicada en el README.
 
 Con la web ya alojada, comprueba HTTPS, redirecciones, respuesta HTTP 404 real y acceso público a las imágenes, CSS y JavaScript. En Search Console, verifica la propiedad y envía el sitemap; la herramienta de inspección permite revisar la versión que Google recibe y la URL canónica que elige. Mide después el rendimiento de la URL publicada en móvil y escritorio.
 

@@ -103,7 +103,7 @@
     if (!form.reportValidity()) return;
 
     if (!endpoint) {
-      setMessage('El formulario directo está pendiente de activación. Puedes escribirnos por WhatsApp o por correo desde el bloque de contacto.', 'config');
+      setMessage('El formulario directo no está disponible ahora mismo. Puedes escribirnos por WhatsApp o por correo desde el bloque de contacto.', 'config');
       return;
     }
 
